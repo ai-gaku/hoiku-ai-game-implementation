@@ -12,25 +12,25 @@ export const scenes = [
   {
     id:'scene01-01', sceneNo:1, sceneLabel:'場面①　朝・記録整理',
     background:assets.backgrounds.recordMorning, bgm:assets.audio.bgmMorning,
-    cast:[p(assets.characters.mashiro.checkRecords, 30,100,80)], speaker:'ナレーション',
+    cast:[p(assets.characters.mashiro.checkRecords, 30,62,72)], speaker:'ナレーション',
     text:'出勤して、子どもたちが登園してくる前。\nましろは昨日の記録を確認していた。'
   },
   {
     id:'scene01-02', sceneNo:1, sceneLabel:'場面①　朝・記録整理',
-    background:assets.backgrounds.recordMorning, cast:[p(assets.characters.mashiro.checkRecords,30,100,80)],
+    background:assets.backgrounds.recordMorning, cast:[p(assets.characters.mashiro.checkRecords,30,62,72)],
     speaker:'ましろ（心の声）', thought:true,
     text:'情報が多い……。頭に入らないな。登園まであまり時間がないのに……。',
     ui:{type:'records', items:records, scrollHint:'↓ 記録は下まで続きます'}
   },
   {
     id:'scene01-03', sceneNo:1, sceneLabel:'場面①　朝・記録整理',
-    background:assets.backgrounds.recordMorning, cast:[p(assets.characters.mashiro.reviewRecords,30,100,80)],
+    background:assets.backgrounds.recordMorning, cast:[p(assets.characters.mashiro.reviewRecords,30,62,72)],
     speaker:'ましろ（心の声）', thought:true,
     text:'これ、AIでもう少し分かりやすく整理できるかな……？'
   },
   {
     id:'scene01-04', sceneNo:1, sceneLabel:'場面①　朝・記録整理',
-    background:assets.backgrounds.recordMorning, cast:[p(assets.characters.mashiro.reviewRecords,30,100,80)],
+    background:assets.backgrounds.recordMorning, cast:[p(assets.characters.mashiro.reviewRecords,30,62,72)],
     speaker:'AI', text:'昨日の記録から、今日の保育で見ておきたいことを整理します。',
     ui:{type:'ai', prompt:'昨日の3人の記録をもとに、今日の保育で見ておきたいポイントを整理してください。',
       output:[
@@ -42,14 +42,14 @@ export const scenes = [
   {
     id:'scene01-05', sceneNo:1, sceneLabel:'場面①　朝・記録整理',
     background:assets.backgrounds.recordMorning,
-    cast:[p(assets.characters.mashiro.talkChizuMorning,17,100,68),p(assets.characters.chizu.talkMorning,51,100,68)],
+    cast:[p(assets.characters.mashiro.talkChizuMorning,17,62,68),p(assets.characters.chizu.talkMorning,51,62,68)],
     speaker:'ナレーション',
     text:'そこへ、先輩保育者のちず先生がやってきました。'
   },
   {
     id:'scene01-06', sceneNo:1, sceneLabel:'場面①　朝・記録整理',
     background:assets.backgrounds.recordMorning,
-    cast:[p(assets.characters.mashiro.talkChizuMorning,17,100,68),p(assets.characters.chizu.talkMorning,51,100,68)],
+    cast:[p(assets.characters.mashiro.talkChizuMorning,17,62,68),p(assets.characters.chizu.talkMorning,51,62,68)],
     speaker:'ちず',
     text:'こうやって“今日見るポイント”まで整理してもらえると助かるよね。ただ、昨日と今日が同じとは限らないから、今日の様子をちゃんと見て動いていこう。'
   },

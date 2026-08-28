@@ -51,7 +51,7 @@ function advance(){
 }
 
 function characterLayer(c){
-  const style = `left:${c.x}%;bottom:${100-c.y}%;width:${c.w}%`;
+  const style = `left:${c.x}%;top:${c.y}%;width:${c.w}%`;
   const debug = new URLSearchParams(location.search).get('debug') === '1';
   return `<div class="character-wrap" style="${style}">
     <img class="character" src="${c.asset}" alt="" draggable="false">
