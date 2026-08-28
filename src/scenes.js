@@ -31,6 +31,15 @@ export const scenes = [
   {
     id:'scene01-04', sceneNo:1, sceneLabel:'場面①　朝・記録整理',
     background:assets.backgrounds.recordMorning, cast:[p(assets.characters.mashiro.reviewRecords,50,80,80)],
+    speaker:'AI利用前の確認',
+    text:'AIを使う前に、入力する情報の扱いを確認します。',
+    ui:{type:'notice',
+      title:'生成AIを実際に使うときの注意',
+      body:'実際の利用では、名前を置き換えるだけでは不十分な場合があります。所属園のルールやAIサービスの情報管理方法を確認し、個人が特定できる情報や機微な情報を安易に入力しないようにしましょう。'}
+  },
+  {
+    id:'scene01-04b', sceneNo:1, sceneLabel:'場面①　朝・記録整理',
+    background:assets.backgrounds.recordMorning, cast:[p(assets.characters.mashiro.reviewRecords,50,80,80)],
     speaker:'AI', text:'昨日の記録から、今日の保育で見ておきたいことを整理します。',
     ui:{type:'ai', prompt:'昨日の3人の記録をもとに、今日の保育で見ておきたいポイントを整理してください。',
       output:[
@@ -55,17 +64,17 @@ export const scenes = [
   },
   {
     id:'scene02-01', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園', sceneStart:true, bgm:null,
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,22,100,34),p(assets.characters.a.holdParent,55,100,28),p(assets.characters.parentA.worried,78,100,34)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdParent,60,90,80),p(assets.characters.parentA.worried,80,80,80)],
     speaker:'ナレーション', text:'登園時間。Aちゃんが保護者と一緒にやってきた。\nAちゃんは保護者の服をつかみ、少し緊張した表情をしている。'
   },
   {
     id:'scene02-02', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,22,100,34),p(assets.characters.a.holdParent,55,100,28),p(assets.characters.parentA.explain,78,100,34)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdParent,60,90,80),p(assets.characters.parentA.explain,80,80,80)],
     speaker:'Aちゃんの保護者', text:'今朝もなかなか家を出たがらなくて。昨日も寝るのが少し遅かったんです。'
   },
   {
     id:'scene02-choice', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,22,100,34),p(assets.characters.a.holdLooking,55,100,28),p(assets.characters.parentA.worried,78,100,34)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdLooking,60,90,80),p(assets.characters.parentA.worried,80,80,80)],
     speaker:'選択', text:'あなたなら、まずどう関わりますか？',
     choices:[
       {id:'scene02-a',label:'同じ目線になり、頭をなでながら「大丈夫だよ」と声をかける'},
@@ -76,18 +85,45 @@ export const scenes = [
   },
   {
     id:'scene02-a', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園', branchOf:'scene02-choice',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,22,100,34),p(assets.characters.a.holdParent,55,100,28),p(assets.characters.parentA.worried,78,100,34)],
-    speaker:'ましろ（心の声）', thought:true, text:'安心してもらおうと思ったけど、今はまだ声をかけるタイミングじゃなかったのかな……。', next:'scene02-converge'
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdParent,60,90,80),p(assets.characters.parentA.worried,80,80,80)],
+    speaker:'ナレーション',
+    text:'ましろはAちゃんと同じ目線になり、頭をなでながら「大丈夫だよ」と声をかけた。\nAちゃんは、少し身体を保護者の方へ寄せた。',
+    next:'scene02-a2'
+  },
+  {
+    id:'scene02-a2', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdParent,60,90,80),p(assets.characters.parentA.worried,80,80,80)],
+    speaker:'ましろ（心の声）', thought:true,
+    text:'安心してもらおうと思ったけど、今はまだ声をかけるタイミングじゃなかったのかな……。',
+    next:'scene02-converge'
   },
   {
     id:'scene02-b', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園', branchOf:'scene02-choice',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,22,100,34),p(assets.characters.a.holdParent,55,100,28),p(assets.characters.parentA.explain,78,100,34)],
-    speaker:'ましろ（心の声）', thought:true, text:'家での様子は分かった。でも、Aちゃん自身の今の様子もちゃんと見ないとな。', next:'scene02-converge'
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdParent,60,90,80),p(assets.characters.parentA.explain,80,80,80)],
+    speaker:'ナレーション',
+    text:'ましろは、昨夜や今朝の様子をもう少し保護者に聞いた。\n家での様子を聞くことができたが、Aちゃんはまだ保護者の服をつかんでいる。',
+    next:'scene02-b2'
+  },
+  {
+    id:'scene02-b2', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdParent,60,90,80),p(assets.characters.parentA.explain,80,80,80)],
+    speaker:'ましろ（心の声）', thought:true,
+    text:'家での様子は分かった。でも、Aちゃん自身の今の様子もちゃんと見ないとな。',
+    next:'scene02-converge'
   },
   {
     id:'scene02-c', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園', branchOf:'scene02-choice',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,22,100,34),p(assets.characters.a.interestPlay,55,100,28),p(assets.characters.parentA.worried,78,100,34)],
-    speaker:'ましろ（心の声）', thought:true, text:'遊びには少し目を向けた。でも、まだおうちの人から離れる準備はできていないのかも。', next:'scene02-converge'
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.interestPlay,60,90,80),p(assets.characters.parentA.worried,80,80,80)],
+    speaker:'ナレーション',
+    text:'ましろはAちゃんの様子を見ながら、好きなままごとに誘ってみた。\nAちゃんはままごとコーナーの方をちらっと見たが、まだ保護者からは離れない。',
+    next:'scene02-c2'
+  },
+  {
+    id:'scene02-c2', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.interestPlay,60,90,80),p(assets.characters.parentA.worried,80,80,80)],
+    speaker:'ましろ（心の声）', thought:true,
+    text:'遊びには少し目を向けた。でも、まだおうちの人から離れる準備はできていないのかも。',
+    next:'scene02-converge'
   },
   {
     id:'scene02-d', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園', branchOf:'scene02-choice',
@@ -106,8 +142,37 @@ export const scenes = [
   },
   {
     id:'scene02-converge', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,28,100,34),p(assets.characters.a.releaseParent,58,100,28),p(assets.characters.parentA.relieved,80,100,34)],
-    speaker:'ナレーション', text:'しばらく、ましろはAちゃんの近くで、無理に話しかけすぎずに過ごした。\nAちゃんは少しずつ周囲を見るようになり、やがて保護者の服から手を離した。'
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdLooking,60,90,80),p(assets.characters.parentA.relieved,80,80,80)],
+    speaker:'ナレーション',
+    text:'しばらく、ましろはAちゃんの近くで、無理に話しかけすぎずに過ごした。\n必要な範囲で保護者から今朝の様子も聞いた。',
+    next:'scene02-converge2'
+  },
+  {
+    id:'scene02-converge2', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdLooking,60,90,80),p(assets.characters.parentA.relieved,80,80,80)],
+    speaker:'ナレーション',
+    text:'Aちゃんは、少しずつ周囲を見るようになった。\n保護者の服をつかむ手も、少しゆるんできた。',
+    next:'scene02-converge3'
+  },
+  {
+    id:'scene02-converge3', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.releaseParent,60,90,80),p(assets.characters.parentA.relieved,80,80,80)],
+    speaker:'ナレーション',
+    text:'やがてAちゃんは保護者の服から手を離し、ましろの近くで、ままごとコーナーの方を見た。',
+    next:'scene02-converge4'
+  },
+  {
+    id:'scene02-converge4', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.releaseParent,60,90,80),p(assets.characters.parentA.relieved,80,80,80)],
+    speaker:'Aちゃんの保護者',
+    text:'お願いします。',
+    next:'scene02-converge5'
+  },
+  {
+    id:'scene02-converge5', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.releaseParent,60,90,80)],
+    speaker:'ましろ（心の声）', thought:true,
+    text:'すぐに遊び始めたわけじゃない。でも、少しずつ周りを見る余裕が出てきたのかも。'
   },
   {
     id:'scene03-01', sceneNo:3, sceneLabel:'場面③　自由遊び', sceneStart:true,

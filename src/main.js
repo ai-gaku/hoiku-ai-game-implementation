@@ -89,6 +89,9 @@ function uiBlock(ui, sceneId){
   if(ui.type === 'records'){
     return `<div class="scroll-hint">${ui.scrollHint}</div><div class="card-list">${ui.items.map(([h,b])=>`<article class="info-card"><h3>${h}</h3><p>${b}</p></article>`).join('')}</div>`;
   }
+  if(ui.type === 'notice'){
+    return `<div class="privacy-note standalone"><strong>${ui.title || '注意'}</strong><span>${ui.body || ''}</span></div>`;
+  }
   if(ui.type === 'ai') return aiBlock(ui, sceneId);
   if(ui.type === 'multiReflect'){
     return `<div class="multi-note">※当てはまるものを複数選べます。</div><div class="reflect-grid">${ui.items.map((x,i)=>`<label class="reflect-card"><input type="checkbox" data-reflect="${i}" ${state.reflect[i] ? 'checked' : ''}><span>${x}</span></label>`).join('')}</div>`;
