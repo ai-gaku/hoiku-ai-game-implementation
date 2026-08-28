@@ -132,12 +132,12 @@ export const scenes = [
   },
   {
     id:'scene02-d2', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.consultChizu,20,100,32),p(assets.characters.chizu.talkMorning,42,100,32),p(assets.characters.a.holdLooking,65,100,26)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.consultChizu,30,60,80),p(assets.characters.a.holdLooking,60,70,80),p(assets.characters.parentA.worried,70,60,80)],
     speaker:'ましろ', text:'まだおうちの人から離れたくなさそうです。でも、少し周りを見る余裕はあるようにも見えます。', next:'scene02-d3'
   },
   {
     id:'scene02-d3', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.consultChizu,20,100,32),p(assets.characters.chizu.talkMorning,42,100,32),p(assets.characters.a.holdLooking,65,100,26)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.consultChizu,30,60,80),p(assets.characters.a.holdLooking,60,70,80),p(assets.characters.parentA.worried,70,60,80)],
     speaker:'ちず', text:'そうだね。じゃあ、今は“どう離すか”より、“どうしたら安心してここにいられるか”を考えてみようか。', next:'scene02-converge'
   },
   {
@@ -170,28 +170,28 @@ export const scenes = [
   },
   {
     id:'scene02-converge5', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.releaseParent,60,90,80)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,30,60,80),p(assets.characters.a.releaseParent,60,70,80),p(assets.characters.parentA.worried,70,60,80)],
     speaker:'ましろ（心の声）', thought:true,
     text:'すぐに遊び始めたわけじゃない。でも、少しずつ周りを見る余裕が出てきたのかも。'
   },
   {
     id:'scene03-01', sceneNo:3, sceneLabel:'場面③　自由遊び', sceneStart:true,
-    sceneImage:assets.scenes.freeplayOverview, speaker:'ナレーション',
+    sceneImage:assets.scenes.freeplayOverview, sceneImageX:-12, speaker:'ナレーション',
     text:'自由遊びの時間。Aちゃんはままごと、Cちゃんは制作を楽しんでいる。\nBちゃんは、ブロックで遊んでいる子どもたちの近くへ向かった。'
   },
   {
     id:'scene03-02', sceneNo:3, sceneLabel:'場面③　自由遊び',
-    background:assets.backgrounds.classroom, cast:[p(assets.characters.b.sayJoin,48,100,34)],
+    background:assets.backgrounds.classroom, bgX:-12, cast:[p(assets.characters.b.sayJoin,60,70,80)],
     speaker:'Bちゃん', text:'入れて'
   },
   {
     id:'scene03-03', sceneNo:3, sceneLabel:'場面③　自由遊び',
-    background:assets.backgrounds.classroom, cast:[p(assets.characters.b.waitResponse,48,100,34)],
+    background:assets.backgrounds.classroom, bgX:-12, cast:[p(assets.characters.b.waitResponse,60,70,80)],
     speaker:'ナレーション', text:'子どもたちは遊びに夢中で、すぐには反応しない。\nBちゃんはもう一度声をかけるが、うまく輪に入れない。'
   },
   {
     id:'scene03-choice', sceneNo:3, sceneLabel:'場面③　自由遊び',
-    background:assets.backgrounds.classroom, cast:[p(assets.characters.b.waitResponse,58,100,32),p(assets.characters.mashiro.consultChizu,22,100,32)],
+    background:assets.backgrounds.classroom, bgX:-12, cast:[p(assets.characters.mashiro.consultChizu,30,60,80),p(assets.characters.b.waitResponse,70,70,80)],
     speaker:'選択', text:'あなたなら、どう関わりますか？',
     choices:[
       {id:'scene03-a',label:'「もう一回、“入れて”って言ってみようか」と声をかける'},
@@ -200,12 +200,12 @@ export const scenes = [
       {id:'scene03-d',label:'ちずに、今どう関わるか相談する'},
     ]
   },
-  {id:'scene03-a',sceneNo:3,sceneLabel:'場面③　自由遊び',branchOf:'scene03-choice',background:assets.backgrounds.classroom,cast:[p(assets.characters.b.waitResponse,55,100,34)],speaker:'ナレーション',text:'ましろが声をかけると、Bちゃんは少し間を置いて子どもたちを見た。',next:'scene03-converge'},
+  {id:'scene03-a',sceneNo:3,sceneLabel:'場面③　自由遊び',branchOf:'scene03-choice',background:assets.backgrounds.classroom, bgX:-12,cast:[p(assets.characters.b.waitResponse,55,100,34)],speaker:'ナレーション',text:'ましろが声をかけると、Bちゃんは少し間を置いて子どもたちを見た。',next:'scene03-converge'},
   {id:'scene03-b',sceneNo:3,sceneLabel:'場面③　自由遊び',branchOf:'scene03-choice',background:assets.backgrounds.classroom,cast:[p(assets.characters.b.sitNearGroup,55,100,34)],speaker:'ナレーション',text:'子どもたちは少し場所を空け、Bちゃんはそのそばに座った。',next:'scene03-converge'},
   {id:'scene03-c',sceneNo:3,sceneLabel:'場面③　自由遊び',branchOf:'scene03-choice',background:assets.backgrounds.classroom,cast:[p(assets.characters.b.offerBlock,55,100,34)],speaker:'ナレーション',text:'少し待っていると、Bちゃんは近くのブロックを手に取り、「これ、使う？」と声をかけた。',next:'scene03-converge'},
   {id:'scene03-d',sceneNo:3,sceneLabel:'場面③　自由遊び',branchOf:'scene03-choice',background:assets.backgrounds.classroom,cast:[p(assets.characters.mashiro.consultChizu,25,100,32),p(assets.characters.chizu.talkMorning,50,100,32),p(assets.characters.b.waitResponse,76,100,28)],speaker:'ちず',text:'Bちゃん、もう一回自分で入ろうとしてるみたいだね。今すぐ手伝うのと、もう少し待つのと、どっちがよさそうかな？',next:'scene03-d2'},
-  {id:'scene03-d2',sceneNo:3,sceneLabel:'場面③　自由遊び',background:assets.backgrounds.classroom,cast:[p(assets.characters.mashiro.consultChizu,25,100,32),p(assets.characters.b.waitResponse,65,100,30)],speaker:'ましろ（心の声）',thought:true,text:'すぐに手伝うだけじゃなくて、Bちゃんが自分でどうしようとしているかを見るのも大事なのかも。',next:'scene03-converge'},
-  {id:'scene03-converge',sceneNo:3,sceneLabel:'場面③　自由遊び',background:assets.backgrounds.classroom,cast:[p(assets.characters.b.sitNearGroup,55,100,34)],speaker:'ましろ（心の声）',thought:true,text:'Bちゃんは、友だちと関わろうと自分なりにいろいろ試しているんだ。すぐに手伝うだけじゃなくて、Bちゃん自身がどう関わろうとしているかを見ることも大事なのかもしれない。'},
+  {id:'scene03-d2',sceneNo:3,sceneLabel:'場面③　自由遊び',background:assets.backgrounds.classroom, bgX:-12,cast:[p(assets.characters.mashiro.consultChizu,30,60,80),p(assets.characters.b.waitResponse,70,70,80)],speaker:'ましろ（心の声）',thought:true,text:'すぐに手伝うだけじゃなくて、Bちゃんが自分でどうしようとしているかを見るのも大事なのかも。',next:'scene03-converge'},
+  {id:'scene03-converge',sceneNo:3,sceneLabel:'場面③　自由遊び',background:assets.backgrounds.classroom, bgX:-12,cast:[p(assets.characters.mashiro.consultChizu,50,60,80)],speaker:'ましろ（心の声）',thought:true,text:'Bちゃんは、友だちと関わろうと自分なりにいろいろ試しているんだ。すぐに手伝うだけじゃなくて、Bちゃん自身がどう関わろうとしているかを見ることも大事なのかもしれない。'},
 
   {id:'scene04-01',sceneNo:4,sceneLabel:'場面④　BちゃんとDちゃんのトラブル',sceneStart:true,sceneImage:assets.scenes.conflictSetup,speaker:'ナレーション',text:'しばらくして。Bちゃんは、Dちゃんが作っているブロックの近くにいた。'},
   {id:'scene04-02',sceneNo:4,sceneLabel:'場面④　BちゃんとDちゃんのトラブル',sceneImage:assets.scenes.conflictMoment,speaker:'ナレーション',text:'ブロックをめぐるやりとりの中で、BちゃんがDちゃんの腕を叩いた。\nDちゃんが泣き出し、近くにいたCちゃんも手を止めて様子を見ている。'},
