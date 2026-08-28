@@ -64,17 +64,17 @@ export const scenes = [
   },
   {
     id:'scene02-01', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園', sceneStart:true, bgm:null,
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdParent,60,90,80),p(assets.characters.parentA.worried,80,80,80)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,30,60,80),p(assets.characters.a.holdParent,60,70,80),p(assets.characters.parentA.worried,70,60,80)],
     speaker:'ナレーション', text:'登園時間。Aちゃんが保護者と一緒にやってきた。\nAちゃんは保護者の服をつかみ、少し緊張した表情をしている。'
   },
   {
     id:'scene02-02', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdParent,60,90,80),p(assets.characters.parentA.explain,80,80,80)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,30,60,80),p(assets.characters.a.holdParent,60,70,80),p(assets.characters.parentA.explain,70,60,80)],
     speaker:'Aちゃんの保護者', text:'今朝もなかなか家を出たがらなくて。昨日も寝るのが少し遅かったんです。'
   },
   {
     id:'scene02-choice', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdLooking,60,90,80),p(assets.characters.parentA.worried,80,80,80)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,30,60,80),p(assets.characters.a.holdLooking,60,70,80),p(assets.characters.parentA.worried,70,60,80)],
     speaker:'選択', text:'あなたなら、まずどう関わりますか？',
     choices:[
       {id:'scene02-a',label:'同じ目線になり、頭をなでながら「大丈夫だよ」と声をかける'},
@@ -92,7 +92,7 @@ export const scenes = [
   },
   {
     id:'scene02-a2', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdParent,60,90,80),p(assets.characters.parentA.worried,80,80,80)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,30,60,80),p(assets.characters.a.holdParent,60,70,80),p(assets.characters.parentA.worried,70,60,80)],
     speaker:'ましろ（心の声）', thought:true,
     text:'安心してもらおうと思ったけど、今はまだ声をかけるタイミングじゃなかったのかな……。',
     next:'scene02-converge'
@@ -106,7 +106,7 @@ export const scenes = [
   },
   {
     id:'scene02-b2', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdParent,60,90,80),p(assets.characters.parentA.explain,80,80,80)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,30,60,80),p(assets.characters.a.holdParent,60,70,80),p(assets.characters.parentA.explain,70,60,80)],
     speaker:'ましろ（心の声）', thought:true,
     text:'家での様子は分かった。でも、Aちゃん自身の今の様子もちゃんと見ないとな。',
     next:'scene02-converge'
@@ -120,7 +120,7 @@ export const scenes = [
   },
   {
     id:'scene02-c2', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.interestPlay,60,90,80),p(assets.characters.parentA.worried,80,80,80)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,30,60,80),p(assets.characters.a.interestPlay,60,70,80),p(assets.characters.parentA.worried,70,60,80)],
     speaker:'ましろ（心の声）', thought:true,
     text:'遊びには少し目を向けた。でも、まだおうちの人から離れる準備はできていないのかも。',
     next:'scene02-converge'
@@ -142,28 +142,28 @@ export const scenes = [
   },
   {
     id:'scene02-converge', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdLooking,60,90,80),p(assets.characters.parentA.relieved,80,80,80)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,30,60,80),p(assets.characters.a.holdLooking,60,70,80),p(assets.characters.parentA.relieved,70,60,80)],
     speaker:'ナレーション',
     text:'しばらく、ましろはAちゃんの近くで、無理に話しかけすぎずに過ごした。\n必要な範囲で保護者から今朝の様子も聞いた。',
     next:'scene02-converge2'
   },
   {
     id:'scene02-converge2', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.holdLooking,60,90,80),p(assets.characters.parentA.relieved,80,80,80)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,30,60,80),p(assets.characters.a.holdLooking,60,70,80),p(assets.characters.parentA.relieved,70,60,80)],
     speaker:'ナレーション',
     text:'Aちゃんは、少しずつ周囲を見るようになった。\n保護者の服をつかむ手も、少しゆるんできた。',
     next:'scene02-converge3'
   },
   {
     id:'scene02-converge3', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.releaseParent,60,90,80),p(assets.characters.parentA.relieved,80,80,80)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,30,60,80),p(assets.characters.a.releaseParent,60,70,80),p(assets.characters.parentA.relieved,70,60,80)],
     speaker:'ナレーション',
     text:'やがてAちゃんは保護者の服から手を離し、ましろの近くで、ままごとコーナーの方を見た。',
     next:'scene02-converge4'
   },
   {
     id:'scene02-converge4', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園',
-    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,20,80,80),p(assets.characters.a.releaseParent,60,90,80),p(assets.characters.parentA.relieved,80,80,80)],
+    background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,30,60,80),p(assets.characters.a.releaseParent,60,70,80),p(assets.characters.parentA.relieved,70,60,80)],
     speaker:'Aちゃんの保護者',
     text:'お願いします。',
     next:'scene02-converge5'
