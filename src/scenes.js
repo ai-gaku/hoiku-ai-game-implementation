@@ -45,7 +45,7 @@ export const scenes = [
     speaker:'ちず', text:'こうやって“今日見るポイント”まで整理してもらえると助かるよね。ただ、昨日と今日が同じとは限らないから、今日の様子をちゃんと見て動いていこう。'
   },
   {
-    id:'scene02-01', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園', sceneStart:true,
+    id:'scene02-01', sceneNo:2, sceneLabel:'場面②　Aちゃんの登園', sceneStart:true, bgm:null,
     background:assets.backgrounds.arrival, cast:[p(assets.characters.mashiro.crouchGentleTalk,22,100,34),p(assets.characters.a.holdParent,55,100,28),p(assets.characters.parentA.worried,78,100,34)],
     speaker:'ナレーション', text:'登園時間。Aちゃんが保護者と一緒にやってきた。\nAちゃんは保護者の服をつかみ、少し緊張した表情をしている。'
   },
@@ -170,7 +170,7 @@ export const scenes = [
 
   {id:'ending-01',sceneNo:'END',sceneLabel:'エンディング',sceneStart:true,background:assets.backgrounds.recordEvening,cast:[p(assets.characters.mashiro.reflectEvening,50,100,38)],speaker:'ナレーション',text:'一日おつかれさまでした。\n最後に、今日の体験を少し振り返ってみましょう。'},
   {id:'ending-02',sceneNo:'END',sceneLabel:'エンディング',background:assets.backgrounds.recordEvening,cast:[p(assets.characters.mashiro.reflectEvening,50,100,38)],speaker:'振り返り',text:'AIが役立った場面と、AIだけでは終わらなかった場面を振り返ってみてください。',ui:{type:'multiReflect',items:['昨日の記録から「今日見るポイント」を整理した','保護者に伝える内容を文章として整理した','一日の記録から「明日見るポイント」を整理した','Aちゃんの様子を見ながら、その場で関わり方を考えた','BちゃんとDちゃんのトラブルに対応した','Bちゃんの保護者と実際に話した']}},
-  {id:'ending-03',sceneNo:'END',sceneLabel:'エンディング',background:assets.backgrounds.recordEvening,cast:[p(assets.characters.mashiro.reflectEvening,50,100,38)],speaker:'ゲーム終了',text:'最後までプレイしてくれて、ありがとうございました。\n\nAIにできることが増えるほど、保育者が何を担うのかを考えることも大切になります。'}
+  {id:'ending-03',sceneNo:'END',sceneLabel:'エンディング',bgm:null,background:assets.backgrounds.recordEvening,cast:[p(assets.characters.mashiro.reflectEvening,50,100,38)],speaker:'ゲーム終了',text:'最後までプレイしてくれて、ありがとうございました。\n\nAIにできることが増えるほど、保育者が何を担うのかを考えることも大切になります。'}
 ];
 
 export const sceneIndex = Object.fromEntries(scenes.map((s,i)=>[s.id,i]));
