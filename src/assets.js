@@ -1,4 +1,4 @@
-const A = '/public/assets';
+const A = './public/assets';
 
 export const assets = {
   backgrounds: {
