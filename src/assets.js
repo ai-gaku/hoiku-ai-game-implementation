@@ -7,11 +7,19 @@ export const assets = {
     classroom: `${A}/images/backgrounds/bg_classroom_main.png`,
     pickup: `${A}/images/backgrounds/bg_pickup_area.png`,
     recordEvening: `${A}/images/backgrounds/bg_record_area_evening.png`,
+    endingClassroomSoft: `${A}/images/backgrounds/bg_ending_classroom_soft.png`,
+    exteriorMorning: `${A}/images/backgrounds/bg_exterior_morning.png`,
+    exteriorEvening: `${A}/images/backgrounds/bg_exterior_evening.png`,
   },
   scenes: {
     freeplayOverview: `${A}/images/scenes/scene03_freeplay_overview.png`,
     conflictSetup: `${A}/images/scenes/scene04_block_conflict_setup.png`,
     conflictMoment: `${A}/images/scenes/scene04_conflict_moment.png`,
+    memory01: `${A}/images/scenes/memory01.png`,
+    memory02: `${A}/images/scenes/memory02.png`,
+    memory03: `${A}/images/scenes/memory03.png`,
+    memory04: `${A}/images/scenes/memory04.png`,
+    memory05: `${A}/images/scenes/memory05.png`,
   },
   characters: {
     mashiro: {
@@ -25,6 +33,8 @@ export const assets = {
       talkParentB: `${A}/images/characters/mashiro/mashiro_talk_parent_b.png`,
       listenParentB: `${A}/images/characters/mashiro/mashiro_listen_parent_b.png`,
       reflectEvening: `${A}/images/characters/mashiro/mashiro_reflect_evening.png`,
+      endingFront: `${A}/images/characters/mashiro/mashiro_ending_front.png`,
+      endingSoftSmile: `${A}/images/characters/mashiro/mashiro_ending_softsmile.png`,
     },
     chizu: {
       listenMorning: `${A}/images/characters/chizu/chizu_listen_morning.png`,
